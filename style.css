@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {   
+    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+    width: 100%;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+}
+
+.product-card {
+    background-color: white;
+    overflow: hidden;
+    width: 360px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    height: 40%;
+    width: 100%;
+}
+
+.mobile-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.desktop-image {
+    display: none;
+}
+
+.product-about {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-type {
+    letter-spacing: 4px;
+    color: hsl(228, 12%, 48%);
+}
+
+.product-name {
+    width: 90%;
+    font-size: 32px;
+    font-family: 'Fraunces', serif;
+}
+
+.product-description {
+    letter-spacing: 0.4px;
+    font-size: 12px;
+    line-height: 20px;
+    color: hsl(212, 21%, 14%);
+}
+
+.product-price {
+    font-family: 'Fraunces', serif;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.product-price-current {
+    font-size: 32px;
+    font-weight: 800;
+    color: hsl(158, 36%, 37%);
+}
+
+.product-price-old {
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+}
+
+.btn-div {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: hsl(158, 36%, 37%);
+    padding: 16px;
+    border-radius: 8px;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+@media (min-width: 900px) {
+    .container {
+        width: 600px;
+    }
+
+    .product-card {
+        flex-direction: row;
+        width: 100%;
+        height: 400px
+    }
+
+
+    .product-image {
+        height: 100%;
+        width: 50%;
+    }
+
+    .mobile-image {
+        display: none;
+    }
+
+    .desktop-image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .product-about {
+        width: 50%;
+    }
+}
